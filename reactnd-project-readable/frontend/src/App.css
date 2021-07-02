@@ -1,0 +1,152 @@
+html, body, #root, .App {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+}
+
+.App {
+  background: #171b21;
+  display: flex;
+}
+
+.navbar {
+  width: 15%;
+  height: 100%;
+  border-right-style: solid;
+  border-color: #656f80;
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar nav {
+  margin: 0;
+  height: 50%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+
+.nav-category {
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+.active-category {
+  color: #171b21;
+  background-color: #61dafb;
+}
+
+.nav-category:hover:not(.active-category) {
+  background-color: #61dafb15;
+  color: #61dafb;
+}
+
+.list-posts {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  height: 100%;
+}
+
+.list-posts-header{
+  display: flex;
+  width: 100%;
+  min-height: min-content;
+  border-bottom-style: solid;
+  border-color: #656f80;
+  border-width: 1px;
+  justify-content: space-between;
+}
+
+
+.list-posts-title{
+  margin: 0;
+  padding: 0px 25px;
+  color: white;
+  align-self: baseline;
+}
+
+.sort-by-buttons {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-self: flex-end;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.sort-by-buttons label{
+  color: white;
+  padding: 7px 20px 7px 7px;
+  cursor: text;
+}
+
+.sort-by-button {
+  display: flex;
+  color: white;
+  border-left-style: solid;
+  border-top-style: solid;
+  border-color: #656f80;
+  border-width: 1px;
+  justify-items: center;
+}
+
+.sort-by-button input{
+  margin: 0;
+  appearance: none;
+}
+
+.sort-by-button input + label{
+  padding: 7px 15px;
+  cursor: pointer;
+}
+
+.sort-by-button input:checked + label{
+  color: #171b21;
+  background-color: #61dafb;
+}
+
+.sort-by-button input:not(:checked) + label:hover{
+  background-color: #61dafb15;
+
+}
+
+.list-posts-posts{
+  margin: 0;
+  color: white;
+}
+
+.list-posts-post{
+  margin: 0;
+  border-bottom-style: solid;
+  border-color: #656f8064;
+  border-width: 1px;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto auto auto;
+}
+
+.post-item-votescore {
+  background-color: teal;
+}
+
+.post-item-title {
+  background-color: yellow;
+}
+
+.post-item-author {
+  background-color: green;
+}
+
+.post-item-comments {
+  background-color: red;
+}
